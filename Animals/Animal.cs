@@ -12,6 +12,18 @@ namespace Animals
         public bool CanFly { get; set; }
         public int AverageLifeExpectancy { get; set; }
 
+        public Animal(int legs, bool canFly, int averageLifeExpectancy)
+        {
+            Legs = legs;
+            CanFly = canFly;
+            AverageLifeExpectancy = averageLifeExpectancy;
+        }
+
+        public Animal(int averageLifeExpectancy)
+        {
+            AverageLifeExpectancy = averageLifeExpectancy;
+        }
+
         public override string ToString()
         {
             string canFly = "can";
@@ -25,6 +37,16 @@ namespace Animals
             return "This animal has " + Legs + " legs, " 
                 + canFly + " fly and has an average life expectancy of " 
                 + AverageLifeExpectancy + " years.";
+        }
+
+        //public string Talk()
+        //{
+        //    return "Random animal noises";
+        //}
+
+        public void Talk()
+        {
+            Console.WriteLine("Random animal noises");
         }
     }
 }
